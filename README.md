@@ -130,3 +130,4 @@ Defined once in `src/utils/status.js` and rendered by `OrderTimeline.jsx`.
 - Replace the QR payment mockup with a real payment gateway (PromptPay API,
   Omise, or 2C2P are common choices in Thailand) before accepting real money.
 "# Project-Module-AJ.Aekkarat" 
+"# Project-Module-AJ.Aekkarat" 
