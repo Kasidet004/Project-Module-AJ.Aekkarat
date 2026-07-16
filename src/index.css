@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-base-950 text-slate-100 font-body antialiased;
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(34, 211, 199, 0.08), transparent 40%),
+      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08), transparent 40%);
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  ::selection {
+    @apply bg-circuit-500/40 text-white;
+  }
+  :focus-visible {
+    outline: 2px solid #22D3C7;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .card-surface {
+    @apply bg-base-800/60 border border-base-600/50 backdrop-blur-sm rounded-xl;
+  }
+  .btn-primary {
+    @apply bg-circuit-500 text-base-950 font-semibold rounded-lg px-4 py-2.5
+           hover:bg-circuit-400 hover:shadow-glow transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-base-700 text-slate-100 font-medium rounded-lg px-4 py-2.5 border border-base-600
+           hover:border-circuit-500/60 transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-base-900 border border-base-600 rounded-lg px-3.5 py-2.5 text-sm
+           placeholder:text-slate-500 focus:border-circuit-500 focus:ring-1 focus:ring-circuit-500
+           outline-none transition-colors;
+  }
+  .label-eyebrow {
+    @apply text-xs font-mono uppercase tracking-widest text-circuit-400;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-circuit-400 to-volt-400 bg-clip-text text-transparent;
+  }
+  .skeleton {
+    @apply animate-pulse bg-base-700 rounded-lg;
+  }
+}
